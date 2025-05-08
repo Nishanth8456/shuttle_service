@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuttle Service</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Header with reddish-pink background -->
+    <header style="background-color: #FF6F61; padding: 10px 20px; color: white; position: relative;">
+        <div class="logo">
+            <h1>Shuttle Service</h1>
+        </div>
+        <div class="auth-links" style="position: absolute; top: 10px; right: 20px;">
+            {% if user.is_authenticated %}
+                <span>Welcome, {{ user.username }}</span> |
+                <a href="{% url 'logout' %}" style="color: white; text-decoration: none;">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" style="color: white; text-decoration: none;">Login</a> |
+                <a href="{% url 'signup' %}" style="color: white; text-decoration: none;">Sign Up</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Welcome to our Shuttle Service</h2>
+        <p>Your journey starts here. Choose from a variety of transportation options to get around the city.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shuttle Service, All rights reserved.</p>
+    </footer>
+</body>
+</html>
