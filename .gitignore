@@ -1,2 +1,53 @@
-# created by virtualenv automatically
-.venv/Lib
+# === Python cache files ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Virtual environments ===
+venv/
+.venv/
+ENV/
+env/
+pip-selfcheck.json
+
+# === Django-specific ===
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+local_settings.py
+
+# === Environment/config ===
+.env
+*.env
+
+# === IDEs ===
+.idea/          # PyCharm
+.vscode/        # VSCode
+
+# === Static & media files (optional) ===
+staticfiles/
+media/
+
+# === Node/npm (if used for frontend) ===
+node_modules/
+build/
+dist/
+
+# === Test and coverage output ===
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# === System/OS files ===
+.DS_Store
+Thumbs.db
