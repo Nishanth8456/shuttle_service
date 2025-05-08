@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('users/', include('users.urls')),
     # path('payments/', include('payments.urls')),
+    path('api/', include('schedule.urls'))
 ]
