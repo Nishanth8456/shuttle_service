@@ -11,6 +11,11 @@ SECRET_KEY = 'django-insecure-j89r9*(u$_aisrazmv2ynff5f-#-2^vg21jboftzbv@r@c7va4
 DEBUG = True
 
 ALLOWED_HOSTS = []
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 # Application definition
 INSTALLED_APPS = [
@@ -25,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',                 # ✅ enable cross-origin for React
+    'corsheaders',         
 ]
 
 MIDDLEWARE = [
